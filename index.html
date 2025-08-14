@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Indian Flag Timeline</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <img src="https://plus.unsplash.com/premium_photo-1675865394768-564a9179f411?q=80&w=725&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" width="200px" alt="Indian Flag">
+    <header class="header">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwOzb69M7hI3v0lYDhJjlt_wNjG4F_GTKZLDRTw8lH3_GFqrCKrACS&usqp=CAE&s" alt="Indian Flag Wave Logo" class="logo" />
         <section>
             <button>Theme Toggler</button>
         </section>
@@ -15,70 +16,76 @@
 
     <nav><!-- container for filters/placeholders --></nav>
 
-    <section id="timeline">
-        <!-- Event Markers will be added here -->
-    </section>
+   <section id="timeline">
+        <div class="timeline-marker">1906</div>
+        <div class="timeline-marker">1907</div>
+        <div class="timeline-marker">1917</div>
+        <div class="timeline-marker">1921</div>
+        <div class="timeline-marker">1931</div>
+        <div class="timeline-marker">1947</div>
+        </section>
+
 
     <div id="modal"><!-- future pop‑ups will be added here --> </div>
 
     <main>
-        <section>
-            <h1>The Unofficial Flag of India - 1906</h1>
-            <figure>
-                <img src="https://d2lptvt2jijg6f.cloudfront.net/flagfoundation/custom/1660300208_1906-flag.png" alt="flag of India in 1906">
-                <figcaption>Fig.1 - Unofficial flag of India in 1906</figcaption>
+        <section class="event">
+            <h1 class="event-title">The Unofficial Flag of India - 1906</h1>
+            <figure class="event-figure">
+                <img src="https://d2lptvt2jijg6f.cloudfront.net/flagfoundation/custom/1660300208_1906-flag.png" alt="flag of India in 1906" class="event-image">
+                <figcaption class="event-caption">Fig.1 - Unofficial flag of India in 1906</figcaption>
             </figure>
-            <article>
+            <article class="event-description">
                 In 1906, during the Swadeshi and Boycott struggle, a flag of India was hoisted for the first time in the Parsee Bagan Square in Calcutta (present-day Kolkata).
             </article>
         </section>
-        <section>
-            <h1>The Berlin Committee Flag - 1907</h1>
-            <figure>
-                <img src="https://d2lptvt2jijg6f.cloudfront.net/Flag%20Foundation/page/1598853299_1907.jpg" alt="flag of India in 1907">
-                <figcaption>Fig.2 - The Berlin committee flag in 1907</figcaption>
+        <section class="event">
+            <h1 class="event-title">The Berlin Committee Flag - 1907</h1>
+            <figure class="event-figure">
+                <img src="https://d2lptvt2jijg6f.cloudfront.net/Flag%20Foundation/page/1598853299_1907.jpg" alt="flag of India in 1907" class="event-image">
+                <figcaption class="event-caption">Fig.2 - The Berlin committee flag in 1907</figcaption>
             </figure>
-            <article>
+            <article class="event-description">
                 In 1907, a similar flag with slight modifications was raised by Madam Bhikaji Cama in Paris.This flag was also exhibited in Berlin at a socialist conference and thus came to be called the Berlin Committee Flag.
             </article>
         </section>
-        <section>
-            <h1>The Home Rule Movement Flag - 1917</h1>
-            <figure>
-                <img src="https://d2lptvt2jijg6f.cloudfront.net/Flag%20Foundation/page/1598853300_1917.jpg" alt="flag of India in 1917">
-                <figcaption>Fig.3 - The Home Rule Movement flag in 1917</figcaption>
+        <section class="event">
+            <h1 class="event-title">The Home Rule Movement Flag - 1917</h1>
+            <figure class="event-figure">
+                <img src="https://d2lptvt2jijg6f.cloudfront.net/Flag%20Foundation/page/1598853300_1917.jpg" alt="flag of India in 1917" class="event-image">
+                <figcaption class="event-caption">Fig.3 - The Home Rule Movement flag in 1917</figcaption>
             </figure>
-            <article>
+            <article class="event-description">
                 In 1917, as a part of the Home Rule Movement, Annie Besant and Bal Gangadhar Tilak hoisted another flag. The flag signified autonomous rule for Indians within the Colonial Empire.
             </article>
         </section>
-        <section>
-            <h1>The Unofficially Adopted Flag - 1921</h1>
-            <figure>
-                <img src="https://d2lptvt2jijg6f.cloudfront.net/Flag%20Foundation/page/1598853300_1921.jpg" alt="flag of India in 1927">
-                <figcaption>Fig.4 - The Unofficially Adopted Flag in 1921</figcaption>
+        <section class="event">
+            <h1 class="event-title">The Unofficially Adopted Flag - 1921</h1>
+            <figure class="event-figure">
+                <img src="https://d2lptvt2jijg6f.cloudfront.net/Flag%20Foundation/page/1598853300_1921.jpg" alt="flag of India in 1927" class="event-image">
+                <figcaption class="event-caption">Fig.4 - The Unofficially Adopted Flag in 1921</figcaption>
             </figure>
-            <article>
+            <article class="event-description">
                 In 1921, at the Bezwada (now Vijayawada) session of Congress, a young freedom fighter Pingali Venkaiah, presented a design of a flag to Mahatma Gandhi. The flag consisted of three stripes representing multiple communities living in harmony in India. A spinning wheel was superimposed in the center, signifying the country's progress.
             </article>
         </section>
-        <section>
-            <h1>The Officially Adopted Flag - 1931</h1>
-            <figure>
-                <img src="https://d2lptvt2jijg6f.cloudfront.net/Flag%20Foundation/page/1598853300_1931.jpg" alt="flag of India in 1931">
-                <figcaption>Fig.5 - The Officially Adopted Flag in 1931</figcaption>
+        <section class="event">
+            <h1 class="event-title">The Officially Adopted Flag - 1931</h1>
+            <figure class="event-figure">
+                <img src="https://d2lptvt2jijg6f.cloudfront.net/Flag%20Foundation/page/1598853300_1931.jpg" alt="flag of India in 1931" class="event-image">
+                <figcaption class="event-caption">Fig.5 - The Officially Adopted Flag in 1931</figcaption>
             </figure>
-            <article>
+            <article class="event-description">
                In 1931, a formal resolution was passed adopting Pingali Vekaiah's flag with a little modification. While the white and green remained, the red was replaced by saffron. The saffron was for courage, white for peace and green for fertility and growth.
             </article>
         </section>
-        <section>
-            <h1>Tiranga - 1947</h1>
-            <figure>
-                <img src="https://d2lptvt2jijg6f.cloudfront.net/Flag%20Foundation/page/1598853300_present.jpg" alt="flag of India in 1947">
-                <figcaption>Fig.6 - Tiranga in 1947</figcaption>
+        <section class="event">
+            <h1 class="event-title">Tiranga - 1947</h1>
+            <figure class="event-figure">
+                <img src="https://d2lptvt2jijg6f.cloudfront.net/Flag%20Foundation/page/1598853300_present.jpg" alt="flag of India in 1947" class="event-image">
+                <figcaption class="event-caption">Fig.6 - Tiranga in 1947</figcaption>
             </figure>
-            <article>
+            <article class="event-description">
                 Finally, in July 1947, the Constituent Assembly formally adopted the flag of free India. The spinning wheel was replaced by the Dharma Chakra of Emperor Ashoka, symbolizing truth and life. This came to be called the Tiranga.
             </article>
         </section>
