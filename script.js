@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
         toggleButton.textContent = isDark ? "🌞" : "🌙";
     });
 
-  fetch("events.json")
+  fetch("data/events.json")
     .then(response => response.json())
     .then(events => {
         const markers = [];
