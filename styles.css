@@ -46,18 +46,18 @@ body.dark {
   border-radius: 8px;
 }
 
-.header button {
+.header #theme-toggle {
   padding: 0.5rem 1rem;
   background-color: var(--accent);
   color: white;
   border: none;
   border-radius: 20px;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 1.4rem;
 }
 #timeline {
   position: relative;
-  max-width: 700px;
+  max-width: 900px;
   margin: 3rem auto 2rem;
   padding: 2rem 1rem 1rem;
   display: flex;
@@ -79,7 +79,7 @@ body.dark {
   z-index: 0;
 }
 
-.timeline-marker {
+.event-marker {
   position: relative;
   z-index: 1;
   flex: 0 0 auto;
@@ -96,8 +96,9 @@ body.dark {
   transition: all 0.3s ease;
 }
 
-.timeline-marker:hover,
-.timeline-marker:focus {
+.event-marker:hover,
+.event-marker:focus,
+.event-marker.selected {
   background: #FF9933; 
   color: white;
   border-color: #138808;
@@ -106,7 +107,7 @@ body.dark {
   transform: scale(1.1);
 }
 
-.timeline-marker:active {
+.event-marker:active {
   transform: scale(0.95);
   box-shadow: 0 4px 8px rgba(255,153,51,0.4);
 }
@@ -128,11 +129,16 @@ body.dark {
 
 main {
   padding: 2rem;
-  max-width: 700px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
-.event {
+#modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  position: relative;
   background-color: var(--card-bg);
   border: 1px solid var(--border);
   border-radius: 10px;
@@ -142,35 +148,33 @@ main {
   transition: transform 0.3s;
 }
 
-.event:hover {
-  transform: translateY(-4px);
-}
-
-.event-title {
-  font-size: 1.4rem;
+#modal-title {
+  font-size: 2rem;
   color: var(--accent);
   margin-bottom: 1rem;
 }
 
-.event-figure {
+.modal-figure {
   margin-bottom: 1rem;
 }
 
-.event-image {
-    max-width: 80%;
-  /* width: 30%; */
+#modal-image {
+  width: 30%;
   border-radius: 8px;
   margin-bottom: 0.5rem;
 }
 
-.event-caption {
-  font-size: 0.85rem;
-  color: gray;
-  text-align: center;
+#modal-description {
+  font-size: 1.2rem;
+  color: var(--text);
 }
 
-.event-description {
-  font-size: 1rem;
+#close-modal {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {
@@ -181,7 +185,12 @@ main {
     padding: 1rem;
   }
 
-  .event-title {
-    font-size: 1.2rem;
+  #modal-title {
+    font-size: 1.3rem;
   }
+
+  #modal-description {
+  font-size: 1.2rem;
+  color: var(--text);
+}
 }

@@ -28,3 +28,25 @@ No JavaScript or interactivity has been added yet. This is the static structure 
 - Accessibility maintained:
   - Contrast-respecting colors
   - Focus/hover styles
+
+## Stage 3: JavaScript Interactivity
+
+Vanilla JavaScript functionality was added to make the timeline dynamic and interactive.
+
+### Key Functionalities:
+
+- **Data-Driven Timeline**
+  - Events are loaded from an external `data/events.json` file.
+
+- **Dynamic Rendering**
+  - JS fetches and parses the JSON file.
+  - Event markers are dynamically created and injected into `#timeline` (inside `.timeline-track`).
+
+- **Modal Pop-Up**
+  - Clicking a marker opens a modal with event details (title, year, image, description).
+  - Modal includes close functionality via a button (`×`) and clicking outside the modal content.
+
+- **Theme Toggle**
+  - Replaced text-based toggle with emoji icons:
+    - 🌙 → enables dark mode.
+    - 🌞 → switches back to light mode.
