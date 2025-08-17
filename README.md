@@ -50,3 +50,23 @@ Vanilla JavaScript functionality was added to make the timeline dynamic and inte
   - Replaced text-based toggle with emoji icons:
     - 🌙 → enables dark mode.
     - 🌞 → switches back to light mode.
+
+## Stage 4: Migration to TypeScript & Modular Code
+
+This stage introduces TypeScript with static typing and modular code architecture.
+
+### Key Enhancements:
+
+- **TypeScript Setup**
+  - Initialized TypeScript with a `tsconfig.json` configured in strict mode for enhanced type safety.
+  - Defined interfaces/types for event data to enforce consistent data structures.
+
+- **Modularization**
+  - Converted the original monolithic `script.js` into multiple ES modules (`fetcher.ts`, `renderer.ts`, `modal.ts`, etc.) inside a `src/` folder.
+
+- **Build Process**
+  - Added build scripts (`tsc`) to compile TypeScript (`.ts`) files into JavaScript (`.js`) files.
+  - Output JavaScript files are stored in a separate `dist/` folder to distinguish source and build artifacts.
+
+- **Maintained Functionality**
+  - Preserved all interactive features such as timeline rendering, modal popups, and theme toggling while improving type safety using typescript.
