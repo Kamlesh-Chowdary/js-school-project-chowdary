@@ -1,35 +1,52 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useEffect, useState } from "react";
+import { fetchEvents } from "./utils/fetchEvents";
+import type { EventData } from "./interfaces/types";
+import Header from "./components/Header";
+import Timeline from "./components/Timeline";
+import EventModal from "./components/EventModal";
 
-function App() {
-  const [count, setCount] = useState(0)
+const App: React.FC = () => {
+  const [events, setEvents] = useState<EventData[]>([]);
+  const [selectedEvent, setSelectedEvent] = useState<EventData | null>(null);
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  // Fetch events on mount
+  useEffect(() => {
+    fetchEvents()
+      .then((data) => {
+        setEvents(data);
+        if (data.length > 0) setSelectedEvent(data[0]); // select first event by default
+      })
+      .catch((error) => console.error("Error loading events:", error));
+  }, []);
+
+  // Toggle dark mode
+  const toggleTheme = () => {
+    setIsDarkMode((prev) => !prev);
+  };
+
+  // Update dark mode on body class
+  useEffect(() => {
+    if (isDarkMode) document.body.classList.add("dark");
+    else document.body.classList.remove("dark");
+  }, [isDarkMode]);
+
+  // Handle event selection from Timeline
+  const handleSelectEvent = (event: EventData) => {
+    setSelectedEvent(event);
+  };
+
+   const closeModal = () => setSelectedEvent(null);
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Header isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
+      <Timeline events={events} onSelect={handleSelectEvent} />
+      <main>
+        {selectedEvent && <EventModal event={selectedEvent}  onClose={closeModal}/>}
+      </main>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
