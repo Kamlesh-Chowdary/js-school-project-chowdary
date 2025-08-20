@@ -96,7 +96,6 @@ This stage rebuilds the entire application UI using **React with TypeScript**, i
 - **Modal Behavior**
   - Modal opens only when a timeline marker is clicked.
   - Modal can be closed **only** by clicking the close (`×`) button.
-  - Semantic roles and ARIA attributes improve accessibility.
 
 - **Styling**
   - Reused existing `style.css` from previous stages to maintain consistent design.
