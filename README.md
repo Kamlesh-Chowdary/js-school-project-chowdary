@@ -70,3 +70,37 @@ This stage introduces TypeScript with static typing and modular code architectur
 
 - **Maintained Functionality**
   - Preserved all interactive features such as timeline rendering, modal popups, and theme toggling while improving type safety using typescript.
+
+## Stage 5: Migration to React + TypeScript
+
+This stage rebuilds the entire application UI using **React with TypeScript**, introducing a modern, component-based architecture while preserving the original functionality and styles.
+
+### 🔧 Key Enhancements:
+
+- **React Setup with Vite**
+  - Bootstrapped using Vite's `react-ts` template for fast builds and TypeScript support.
+
+- **Component-Based Architecture**
+  - `App`: Root component managing global state (theme, selected event).
+  - `<Header>`: Displays logo and a theme toggle button (🌙 / 🌞).
+  - `<Timeline>`: Maps over event data and renders `<EventMarker>` components.
+  - `<EventMarker>`: Represents a clickable year marker.
+  - `<EventModal>`: Shows detailed information about a selected event.
+
+- **State Management with React Hooks**
+  - Used `useState` and `useEffect` to manage:
+    - Theme toggling
+    - Modal open/close state
+    - Fetching and displaying event data
+
+- **Modal Behavior**
+  - Modal opens only when a timeline marker is clicked.
+  - Modal can be closed **only** by clicking the close (`×`) button.
+  - Semantic roles and ARIA attributes improve accessibility.
+
+- **Styling**
+  - Reused existing `style.css` from previous stages to maintain consistent design.
+  - Global CSS applied directly; no CSS Modules or styled-components used in this stage.
+
+
+This stage modernizes the app's structure and development flow while preserving its design, interactivity, and accessibility.
