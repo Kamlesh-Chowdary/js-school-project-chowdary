@@ -36,12 +36,13 @@ const App: React.FC = () => {
     setSelectedEvent(event);
   };
 
-   const closeModal = () => setSelectedEvent(null);
-
+   const closeModal = () => {
+    setSelectedEvent(null);
+   }
   return (
     <>
       <Header isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
-      <Timeline events={events} onSelect={handleSelectEvent} />
+      <Timeline events={events} onSelect={handleSelectEvent} selectedEvent={selectedEvent} />
       <main>
         {selectedEvent && <EventModal event={selectedEvent}  onClose={closeModal}/>}
       </main>
