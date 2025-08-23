@@ -1,34 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Indian Flag Timeline</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header class="header">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwOzb69M7hI3v0lYDhJjlt_wNjG4F_GTKZLDRTw8lH3_GFqrCKrACS&usqp=CAE&s" alt="Indian Flag Wave Logo" class="logo" />
-        <section>
-            <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
-        </section>
-    </header>
-
-    <nav><!-- container for filters/placeholders --></nav>
-
-   <section id="timeline"> </section>
-
-    <main id="modal" class="hidden">
-        <article class="modal-content">
-            <span id="close-modal">&times;</span>
-            <h2 id="modal-title"></h2>
-            <figure class="modal-figure">
-                <img id="modal-image" alt="Event image" />
-                <figcaption id="modal-description"></figcaption>
-            </figure>
-            
-        </article>
-    </main>
-    <script type="module" src="./dist/index.js"></script>
-</body>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>

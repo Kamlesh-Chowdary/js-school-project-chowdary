@@ -1,7 +1,8 @@
 export interface EventData {
-    year: number;
-    title: string;
-    description: string;
-    imageURL: string;
-    category: string;
+  id: number;
+  year: string;
+  title: string;
+  description: string;
+  imageURL: string;
+  category?: string;
 }
