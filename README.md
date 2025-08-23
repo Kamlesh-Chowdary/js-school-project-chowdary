@@ -103,3 +103,21 @@ This stage rebuilds the entire application UI using **React with TypeScript**, i
 
 
 This stage modernizes the app's structure and development flow while preserving its design, interactivity, and accessibility.
+
+## Stage 6: Accessibility Enhancements
+
+### Key Improvements:
+
+- Added ARIA roles and attributes for improved screen reader support.
+- Modal uses `role="dialog"` with `aria-modal="true"` and traps keyboard focus inside.
+- Active timeline marker includes `aria-current="true"` for context.
+- Focus management ensures return to triggering marker on modal close.
+- Enhanced keyboard navigation:
+  - Timeline markers accessible via Tab and selectable with Enter/Space.
+  - Modal can be closed using the Escape key.
+- Verified text and background color contrast meets WCAG AA standards (≥4.5:1).
+- Added descriptive `aria-label`s to interactive elements.
+- Visual focus indicators added to all interactive controls.
+- Documented all accessibility changes in a dedicated `ACCESSIBILITY.md` file.
+
+This stage significantly improves accessibility, making the app usable for all users and compliant with WCAG guidelines.
