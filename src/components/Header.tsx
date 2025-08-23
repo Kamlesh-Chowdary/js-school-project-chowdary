@@ -14,11 +14,11 @@ const Header: React.FC<HeaderProps> = ({ isDarkMode, toggleTheme }) => {
         aria-label="Indian Flag Logo"
       />
       <button 
-      onClick={toggleTheme} 
-      id="theme-toggle"  
-      aria-label={isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"} 
-      title={isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"} 
-      tabIndex={0}
+        onClick={toggleTheme} 
+        id="theme-toggle"  
+        aria-label={isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"} 
+        title={isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"} 
+        tabIndex={0}
       >
         {isDarkMode ? "🌞" : "🌙"}
       </button>

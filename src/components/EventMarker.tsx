@@ -12,7 +12,8 @@ const EventMarker: React.FC<EventMarkerProps> = ({ year, onClick, isActive }) =>
       className={`event-marker${isActive ? " selected" : ""}`}
       onClick={onClick}
       type="button"
-      aria-pressed={isActive} // Indicates the active state
+      aria-pressed={isActive} 
+      aria-current={isActive ? "true" : undefined}
       aria-label={`Select event for the year ${year}`}
     >
       {year}
